@@ -1,7 +1,7 @@
 import { BaseModel } from 'meteor/socialize:base-model';
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
-import { LinkParent } from 'meteor/socialize:linkable-model';
+import { LinkParent, LinkableModel } from 'meteor/socialize:linkable-model';
 import { PostableModel } from 'meteor/socialize:postable';
 
 export const GroupsCollection = new Mongo.Collection('socialize:groups');
@@ -32,7 +32,7 @@ const groupSchema = new SimpleSchema({
   },
   parentGroup: {
     type: String,
-    regex: SimpleSchema.RegEx.Id,
+    regEx: SimpleSchema.RegEx.Id,
     optional: true,
     index: 1
   },

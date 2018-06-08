@@ -8,12 +8,12 @@ export const GroupMembersCollection = new Mongo.Collection('socialize:groupMembe
 const groupMembersSchema = new SimpleSchema({
   userId: {
     type: String,
-    regex: SimpleSchema.RegEx.Id,
+    regEx: SimpleSchema.RegEx.Id,
     index: 1
   },
   groupId: {
     type: String,
-    regex: SimpleSchema.RegEx.Id,
+    regEx: SimpleSchema.RegEx.Id,
     index: 1
   },
   role: {
